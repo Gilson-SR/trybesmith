@@ -7,7 +7,7 @@ const router = Router();
 
 const usersController = new UsersController();
 
-router.use(LoginMiddleware.validateBody);
+router.use(LoginMiddleware.bodyValidation);
 
 router.post('/', usersController.login);
 
