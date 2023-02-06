@@ -6,9 +6,9 @@ const router = Router();
 
 const productController = new ProductsController();
 
+router.use(ProductMiddleware.bodyValidation);
+
 router.post('/', (req, res) => productController.create(req, res));
 router.get('/', (req, res) => productController.getAll(req, res));
-
-router.use(ProductMiddleware.bodyValidation);
 
 export default router;
