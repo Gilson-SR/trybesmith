@@ -1,7 +1,9 @@
 import express from 'express';
-// initial commit
+import productsRouter from './routers/productsRouter';
+
 const app = express();
 
 app.use(express.json());
+app.use('/products', productsRouter);
 
 export default app;
