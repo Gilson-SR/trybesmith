@@ -10,7 +10,11 @@ export interface IUser {
   level: number,
   password: string,
 }
-  
+
+export interface User extends IUser {
+  id: number,
+}
+
 export interface IToken {
   token: string,
 }
@@ -24,4 +28,9 @@ export interface IOrder {
   id: number,
   userId: number,
   productsIds: number[]
+}
+
+export interface IUserLogin {
+  username: string,
+  password: string,
 }
