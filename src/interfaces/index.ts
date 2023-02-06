@@ -19,3 +19,9 @@ export interface IPayload {
   id: number,
   username: string,
 }
+
+export interface IOrder {
+  id: number,
+  userId: number,
+  productsIds: number[]
+}
